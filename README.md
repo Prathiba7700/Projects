@@ -1,32 +1,48 @@
-*** Walmart-Sales-Data-Analysis--SQL-Project ***
+## 📊 **Walmart Sales Data Analysis – SQL Project**
 
-Introduction:
-This project focuses on analyzing Walmart's sales data to uncover top-performing branches and products, examine sales trends, and gain insights into customer behavior. The ultimate goal is to support more effective and optimized sales strategies. The dataset used in this analysis originates from the Walmart Sales.
+---
 
-Purpose of the Project:
-The primary objective of this project is to derive meaningful insights from Walmart's sales data by exploring the various factors that impact sales performance across different branches.
+### 🧾 **Introduction**
 
-About Data:
-This project's data was obtained from the Kaggle Walmart Sales Forecasting Competition and it encompasses sales transactions from three Walmart branches situated in Mandalay, Yangon, and Naypyitaw, respectively. The data contains 17 columns and 1000 rows:
+This project focuses on analyzing Walmart’s sales data to identify the most successful branches and product lines, understand sales patterns, and gain deeper insights into customer behavior. The ultimate objective is to extract actionable intelligence that can drive smarter sales strategies and business decisions.
 
-Column	Description	Data Type
-invoice_id	Invoice of the sales made	VARCHAR(30)
-branch	Branch at which sales were made	VARCHAR(5)
-city	The location of the branch	VARCHAR(30)
-customer_type	The type of the customer	VARCHAR(30)
-gender	Gender of the customer making purchase	VARCHAR(10)
-product_line	Product line of the product sold	VARCHAR(100)
-unit_price	The price of each product	DECIMAL(10, 2)
-quantity	The amount of the product sold	INT
-VAT	The amount of tax on the purchase	FLOAT(6, 4)
-total	The total cost of the purchase	DECIMAL(12, 4)
-date	The date on which the purchase was made	DATETIME
-time	The time at which the purchase was made	TIME
-payment	The total amount paid	DECIMAL(10, 2)
-cogs	Cost Of Goods sold	DECIMAL(10, 2)
-gross_margin_pct	Gross margin percentage	FLOAT(11, 9)
-gross_income	Gross Income	DECIMAL(12, 4)
-rating	Rating	FLOAT(2, 1)
+---
+
+### 🎯 **Purpose of the Project**
+
+The goal of this project is to derive meaningful insights from Walmart's retail data by investigating key variables that influence sales performance across different store locations. The insights gained will assist in evaluating and improving current business operations.
+
+---
+
+### 📦 **About the Dataset**
+
+The data used in this project is sourced from the **Walmart Sales Forecasting on Kaggle**. It consists of transactional sales data.
+
+The dataset includes **1,000 rows** and **17 columns**, with information ranging from purchase details to customer demographics and sales metrics.
+
+---
+
+### 📋 **Data Dictionary**
+
+| **Column**         | **Description**                            | **Data Type**    |
+| ------------------ | ------------------------------------------ | ---------------- |
+| `invoice_id`       | Unique identifier for each sale            | `VARCHAR(30)`    |
+| `branch`           | Branch code (A, B, or C)                   | `VARCHAR(5)`     |
+| `city`             | City where the branch is located           | `VARCHAR(30)`    |
+| `customer_type`    | Type of customer (Member or Normal)        | `VARCHAR(30)`    |
+| `gender`           | Gender of the customer                     | `VARCHAR(10)`    |
+| `product_line`     | Category of the purchased product          | `VARCHAR(100)`   |
+| `unit_price`       | Price per unit of the product              | `DECIMAL(10, 2)` |
+| `quantity`         | Number of units sold                       | `INT`            |
+| `VAT`              | Value Added Tax applied                    | `FLOAT(6, 4)`    |
+| `total`            | Total amount of the transaction            | `DECIMAL(12, 4)` |
+| `date`             | Date of the transaction                    | `DATETIME`       |
+| `time`             | Time of the transaction                    | `TIME`           |
+| `payment`          | Payment method used                        | `VARCHAR(20)`    |
+| `cogs`             | Cost of goods sold                         | `DECIMAL(10, 2)` |
+| `gross_margin_pct` | Gross margin percentage                    | `FLOAT(11, 9)`   |
+| `gross_income`     | Gross income from the transaction          | `DECIMAL(12, 4)` |
+| `rating`           | Customer satisfaction rating (1.0 to 10.0) | `FLOAT(2, 1)`    |
 
 ------------------------------------
 ### 🔍 **Analysis Overview**
