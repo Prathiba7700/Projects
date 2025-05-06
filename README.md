@@ -1,13 +1,12 @@
-# Projects
-Walmart-Sales-Data-Analysis--SQL-Project
+*** Walmart-Sales-Data-Analysis--SQL-Project ***
 
-About
-We are analysing Walmart's sales data to identify high-performing branches and products, analyze the sales patterns of various products, and understand customer behavior. The primary objective is to enhance and optimize sales strategies. The dataset utilized in this project is sourced from the Kaggle Walmart Sales Forecasting Competition.
+Introduction:
+This project focuses on analyzing Walmart's sales data to uncover top-performing branches and products, examine sales trends, and gain insights into customer behavior. The ultimate goal is to support more effective and optimized sales strategies. The dataset used in this analysis originates from the Walmart Sales.
 
-Purposes of the Project
-The main goal of this project is to gain understanding from Walmart's sales data, exploring the various factors that influence sales across different branches.
+Purpose of the Project:
+The primary objective of this project is to derive meaningful insights from Walmart's sales data by exploring the various factors that impact sales performance across different branches.
 
-About Data
+About Data:
 This project's data was obtained from the Kaggle Walmart Sales Forecasting Competition and it encompasses sales transactions from three Walmart branches situated in Mandalay, Yangon, and Naypyitaw, respectively. The data contains 17 columns and 1000 rows:
 
 Column	Description	Data Type
@@ -28,65 +27,95 @@ cogs	Cost Of Goods sold	DECIMAL(10, 2)
 gross_margin_pct	Gross margin percentage	FLOAT(11, 9)
 gross_income	Gross Income	DECIMAL(12, 4)
 rating	Rating	FLOAT(2, 1)
-Analysis List:
-Product Analysis
-Perform an analysis on the data to gain insights into different product lines, determine the top-performing product lines, and identify areas for improvement in other product lines.
 
-Sales Analysis
-The objective of this analysis is to address the inquiry regarding the sales trends of the product. The outcomes of this analysis can assist in evaluating the efficiency of each applied sales strategy in the business and determining necessary modifications to increase sales.
+------------------------------------
+### 🔍 **Analysis Overview**
 
-Customer Analysis
-This analysis is focused on identifying various customer segments, understanding purchasing trends, and evaluating the profitability associated with each of these customer segments.
+#### ✅ **Product Analysis**
 
-Approach Used
-1. Data Wrangling
+* Analyze sales data across different product lines.
+* Identify top-performing product lines based on revenue and volume.
+* Highlight underperforming product lines for potential improvement.
 
-During this initial phase, the data is examined to detect any NULL or missing values, and strategies for data replacement are implemented to address and substitute these values effectively.
+#### ✅ **Sales Analysis**
 
-Build a database
-Create a table and insert the data.
-Select columns with null values in them. Null values are not present in our database because, in creating the tables, NOT NULL was specified for each field, effectively filtering out any null values.
-2. Feature Engineering
+* Examine sales trends over time (daily, weekly, monthly).
+* Assess the effectiveness of current sales strategies.
+* Recommend modifications to boost overall sales performance.
 
-This will help use generate some new columns from existing ones.
+#### ✅ **Customer Analysis**
 
-Add a new column named time_of_day to give insight of sales in the Morning, Afternoon and Evening. This will help answer the question on which part of the day most sales are made.
-Add a new column named day_name that contains the extracted days of the week on which the given transaction took place (Mon, Tue, Wed, Thur, Fri). This will help answer the question on which week of the day each branch is busiest.
-Add a new column named month_name that contains the extracted months of the year on which the given transaction took place (Jan, Feb, Mar). Help determine which month of the year has the most sales and profit.
-3. Exploratory Data Analysis (EDA)
+* Segment customers based on behavior and demographics.
+* Identify purchasing patterns across different segments.
+* Evaluate the profitability and value of each customer group.
 
-Conducting exploratory data analysis is essential to address the project's listed questions and objectives.
+---
 
-Business Questions to Answer
-Generic Questions
-How many distinct cities are present in the dataset?
-In which city is each branch situated?
-Product Analysis
-How many distinct product lines are there in the dataset?
-What is the most common payment method?
-What is the most selling product line?
-What is the total revenue by month?
-Which month recorded the highest Cost of Goods Sold (COGS)?
-Which product line generated the highest revenue?
-Which city has the highest revenue?
-Which product line incurred the highest VAT?
-Retrieve each product line and add a column product_category, indicating 'Good' or 'Bad,' based on whether its sales are above the average.
-Which branch sold more products than average product sold?
-What is the most common product line by gender?
-What is the average rating of each product line?
-Sales Analysis
-Number of sales made in each time of the day per weekday
-Identify the customer type that generates the highest revenue.
-Which city has the largest tax percent/ VAT (Value Added Tax)?
-Which customer type pays the most VAT?
-Customer Analysis
-How many unique customer types does the data have?
-How many unique payment methods does the data have?
-Which is the most common customer type?
-Which customer type buys the most?
-What is the gender of most of the customers?
-What is the gender distribution per branch?
-Which time of the day do customers give most ratings?
-Which time of the day do customers give most ratings per branch?
-Which day of the week has the best avg ratings?
-Which day of the week has the best average ratings per branch?
+### 🛠️ **Approach Used**
+
+#### 1️⃣ **Data Wrangling**
+
+* Checked for missing or NULL values in the dataset.
+* Ensured data quality by applying `NOT NULL` constraints during table creation, effectively eliminating NULLs.
+
+#### 2️⃣ **Feature Engineering**
+
+* Created new columns to enrich the dataset and enhance analysis:
+
+  * `time_of_day`: Categorized as Morning, Afternoon, or Evening to track peak sales times.
+  * `day_name`: Extracted the weekday name (Mon–Sun) to analyze branch activity by day.
+  * `month_name`: Extracted the transaction month (Jan–Dec) to find seasonal sales trends.
+
+#### 3️⃣ **Exploratory Data Analysis (EDA)**
+
+* Performed EDA to address core business questions and uncover actionable insights.
+
+---
+
+### ❓ **Business Questions Addressed**
+
+#### 🏙️ **Generic Questions**
+
+* How many unique cities are represented in the dataset?
+* Which city is each branch located in?
+
+---
+
+#### 📦 **Product Analysis**
+
+* How many unique product lines are there?
+* What is the most frequently used payment method?
+* Which product line has the highest number of sales?
+* What is the total monthly revenue?
+* Which month recorded the highest Cost of Goods Sold (COGS)?
+* Which product line generated the most revenue?
+* Which city achieved the highest overall revenue?
+* Which product line paid the most in VAT?
+* Categorize product lines as 'Good' or 'Bad' based on whether their sales exceed the average.
+* Which branch sold more products than the average sales per branch?
+* What is the most purchased product line by gender?
+* What is the average customer rating for each product line?
+
+---
+
+#### 💰 **Sales Analysis**
+
+* How many sales were made during each part of the day across weekdays?
+* Which customer type brings in the most revenue?
+* Which city has the highest VAT percentage?
+* Which customer type pays the most VAT?
+
+---
+
+#### 👥 **Customer Analysis**
+
+* How many unique customer types are in the dataset?
+* How many distinct payment methods are used?
+* What is the most frequent customer type?
+* Which customer type purchases the most products?
+* What is the most common gender among customers?
+* How is gender distributed across different branches?
+* At what time of day are most customer ratings given?
+* During which time of day do customers leave the most ratings per branch?
+* Which day of the week receives the highest average ratings overall?
+* What is the best-rated day of the week for each branch?
